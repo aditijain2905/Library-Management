@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style>
+    body{
+    font-family:'Roboto','sans-serif';
+}
+
+
+</style>
+</head>
+<body>
+<div class="sidebar">
+<header>Library</header>
+<ul>
+
+<li><a href="/addbook/"><i class="fas fa-book"></i></a></li>
+<li><a href="/addstudent/"><i class="fa fa-user"></i></a></li>
+<li><a href="/bookissue/"><i class="fas fa-paperclip"></i></a></li>
+<li><a href="/viewissuedbook/"><i class="fa fa-user"></i></a></li>
+<li><a href="/viewstudents/"><i class="fas fa-paperclip"></i></a></li>
+<li><a href="/returnbook/"><i class="fas fa-exchange-alt"></i></a></li>
+
+</ul>
+<div class="bg-img">
+<div class="form-box">
+<div class="wrapper">
+<form action="/AddBookSubmission/" method="post">
+{% csrf_token %}
+<label for="bookno">Book no:</label>
+<input type="text" name="bookno" class="form-control" id="bookno" required/>
+<br>
+<label for="name">Book Name:</label>
+<input type="text" name="name" class="form-control" id="name" required/>
+<br>
+<label for="author">author:</label>
+<input type="text" name="author" class="form-control" id="author" required/>
+<br>
+<label for="status">Issue date):</label>
+<input type="text" name="issuedate" class="form-control" id="issuedate" required/>
+<button type="submit">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>

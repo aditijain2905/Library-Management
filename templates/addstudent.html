@@ -1,0 +1,60 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style>
+    body{
+    font-family:'Roboto','sans-serif';
+}
+
+</style>
+</head>
+<body>
+</div>
+<div class="sidebar">
+<header>Library</header>
+
+<ul>
+
+<li><a href="/addstudent/"><i class="fa fa-user"></i> </a></li>
+<li><a href="/bookissue/"><i class="fas fa-paperclip"></i> </a></li>
+<li><a href="/viewissuedbook/"><i class="fa fa-user"></i> </a></li>
+<li><a href="/viewstudents/"><i class="fas fa-paperclip"></i> </a></li>
+<li><a href="/returnbook/"><i class="fas fa-exchange-alt"></i> </a></li>
+
+</ul>
+
+<div class="bg-img">
+<div class="form-box">
+<div class="wrapper">
+<form action="/addstudentsubmission/" method="post">
+{% csrf_token %}
+
+
+<label for="name">Student name:</label>
+<input type="text" name="name" class="form-control" id="name" required/>
+<br>
+
+<label for="age">Student age:</label>
+<input type="text" name="age" class="form-control" id="age" required/>
+<br>
+
+
+
+<label for="issuedate">issuedate:</label>
+<input type="text" name="issuedate" class="form-control" id="issuedate" required/>
+<br>
+
+
+<button type="submit">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
